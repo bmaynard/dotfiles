@@ -42,11 +42,17 @@ brew install ringojs
 brew install narwhal
 
 # Install more recent versions of some macOS tools.
-brew install vim --override-system-vi
+brew install vim --with-override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
+
+# PHP 7
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap homebrew/homebrew-php
+brew unlink php56
+brew install php70
 
 # Install font tools.
 brew tap bramstein/webfonttools
